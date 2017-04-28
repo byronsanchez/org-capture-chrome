@@ -7,7 +7,7 @@
 
     "homepage_url": "https://github.com/cestdiego/org-capture-chrome",
 
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "tabs"],
 
     "background": {
         "persistent": true,
@@ -16,10 +16,13 @@
 
     "commands": {
         "link": {
-            "suggested_key": { "default": "Ctrl+Shift+L" },
+            "suggested_key": { "default": "Ctrl+Y" },
             "description": "Capture the link, if there was a selection, send that too"
         },
-
+        "bookmark": {
+            "suggested_key": { "default": "Ctrl+B" },
+            "description": "Capture a permanent bookmark"
+        },
         "capture": {
             "suggested_key": { "default": "Ctrl+Shift+C" },
             "description": "Capture the selected text"

@@ -1,5 +1,7 @@
 var capture = function(config){
 
+  console.log("CAPTURE INVOKED");
+
     /**
      * Escape all instances of a character @p char
      */
@@ -36,10 +38,17 @@ var capture = function(config){
             + text;
         break;
     case "l":
-        uri = uri + config.template + '/'
+        uri = uri + 'w' + '/'
             + encodeURIComponent(location.href) + '/'
-            + encodeURIComponent(document.title);
+            + encodeURIComponent(document.title)
+            + text;
         break;
+    case "u":
+	    uri = uri + 'u' + '/'
+		    + encodeURIComponent(location.href) + '/'
+		    + encodeURIComponent(document.title)
+		    + text;
+	    break;
     case "o":
         uri = uri + encodeURIComponent(window.location.href) + '/'
             + encodeURIComponent(document.title)
@@ -51,5 +60,7 @@ var capture = function(config){
 
     location.href = uri;
 };
+
+console.log("in capturing");
 
 capture(config);
