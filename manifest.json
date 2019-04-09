@@ -26,6 +26,10 @@
         "capture": {
             "suggested_key": { "default": "Ctrl+Shift+C" },
             "description": "Capture the selected text"
+        },
+        "store": {
+            "suggested_key": { "default": "Ctrl+L" },
+            "description": "Store the link via emacs using org-store-link"
         }
     },
 

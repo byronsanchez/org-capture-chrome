@@ -1,5 +1,6 @@
+
 document.addEventListener('DOMContentLoaded', function() {
-    var submitButton = document.getElementById('submit');
+	  var submitButton = document.getElementById('submit');
     submitButton.addEventListener('click', function() {
       console.log("click");
         var templateField = document.getElementById('template');

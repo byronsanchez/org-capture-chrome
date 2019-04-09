@@ -1,26 +1,32 @@
+
 // Translate the keyboard shortcuts in manifest.json
+
 console.log("HERE test ondemand");
+
 chrome.commands.onCommand.addListener(function(command) {
-  console.log("cmd invoked!");
-  console.log(command);
-    var config = {};
-    switch(command) {
-    case "link":
-        config.template = "l";
-        break;
-    case "capture":
-        config.template = "c";
-        break;
-    case "bookmark":
-	    config.template = "u";
-	    break;
-    case "other":
-        config.template = "o";
-        break;
-    case "query":
-        config.template = "q";
-        break;
-    }
+	console.log("cmd invoked!");
+	console.log(command);
+	var config = {};
+	switch(command) {
+	case "link":
+		config.template = "l";
+		break;
+	case "capture":
+		config.template = "c";
+		break;
+	case "bookmark":
+		config.template = "u";
+		break;
+	case "other":
+		config.template = "o";
+		break;
+	case "query":
+		config.template = "q";
+		break;
+	case "store":
+		config.template = "s";
+		break;
+	}
 
     chrome.tabs.executeScript(
         {code: 'var config = ' + JSON.stringify(config)},
